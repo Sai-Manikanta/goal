@@ -1,5 +1,5 @@
 import { BiRupee } from 'react-icons/bi'
-import { RiStockLine, RiStockFill } from 'react-icons/ri'
+import { RiStockFill } from 'react-icons/ri'
 import { AiOutlineCheckCircle } from 'react-icons/ai'
 
 function loadScript(src) {
