@@ -67,10 +67,12 @@ function pricing() {
                 <div className="border-b pb-3 flex">
                     <Image 
                         src="/images/pyramid.jpg" 
-                        alt="candles" 
-                        className="w-16 h-14 object-cover object-right rounded-lg mr-3"
+                        alt="candles"
+						width="60px" 
+						height="50px"
+                        className="w-16 h-14 object-cover object-right rounded-lg"
                     />
-                    <div>
+                    <div className="pl-2">
                         <h2 className="font-black tracking-wider text-lg">Silver</h2>
                         <p className="flex items-center text-xl">
                             <BiRupee /> 1000&nbsp;
@@ -101,7 +103,7 @@ function pricing() {
                 </div>
 
                 <button 
-					className="bg-blue-500 text-white w-full text-center py-2.5 rounded-lg font-thin flex justify-center hover:bg-blue-600"
+					className="bg-blue-500 text-white w-full text-center py-2 rounded-lg font-thin flex justify-center hover:bg-blue-600"
 					onClick={displayRazorpay}
 				>
 					<span className="flex items-center">
