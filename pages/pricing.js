@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { BiRupee } from 'react-icons/bi'
 import { RiStockFill } from 'react-icons/ri'
 import { AiOutlineCheckCircle } from 'react-icons/ai'
@@ -64,7 +65,7 @@ function pricing() {
                 className="bg-white m-5 rounded-xl p-6 text-gray-800"
             >
                 <div className="border-b pb-3 flex">
-                    <img 
+                    <Image 
                         src="/images/pyramid.jpg" 
                         alt="candles" 
                         className="w-16 h-14 object-cover object-right rounded-lg mr-3"
