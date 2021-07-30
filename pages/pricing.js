@@ -18,7 +18,7 @@ function loadScript(src) {
 	})
 }
 
-function pricing() {
+function Pricing() {
 	const router = useRouter();
 
     async function displayRazorpay() {
@@ -51,6 +51,7 @@ function pricing() {
 				//console.log('---success capture---')
 				//console.log(response)
 				router.replace('/dashboard')
+				//router.push('/dashboard')
 			}
             //,
 			// prefill: {
@@ -120,4 +121,4 @@ function pricing() {
     )
 }
 
-export default pricing
+export default Pricing
