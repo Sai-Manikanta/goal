@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { BiRupee } from 'react-icons/bi'
 import { RiStockFill } from 'react-icons/ri'
 import { AiOutlineCheckCircle } from 'react-icons/ai'
+import { useRouter } from 'next/router'
 
 function loadScript(src) {
 	return new Promise((resolve) => {
@@ -18,6 +19,8 @@ function loadScript(src) {
 }
 
 function pricing() {
+	const router = useRouter();
+
     async function displayRazorpay() {
 		const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
 
@@ -45,8 +48,9 @@ function pricing() {
 				// alert(response.razorpay_payment_id)
 				// alert(response.razorpay_order_id)
 				// alert(response.razorpay_signature)
-				console.log('---success capture---')
-				console.log(response)
+				//console.log('---success capture---')
+				//console.log(response)
+				router.replace('/dashboard')
 			}
             //,
 			// prefill: {
