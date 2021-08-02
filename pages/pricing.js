@@ -25,11 +25,9 @@ function Pricing() {
 
 	useEffect(() => {
 		if(orderId){
-			router.replace('/dashboard');
+			router.replace(`/success/${orderId}`);
 		}
 	}, [orderId])
-
-	console.log(orderId);
 
     async function displayRazorpay() {
 		const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
