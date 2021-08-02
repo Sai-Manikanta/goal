@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { BiRupee } from 'react-icons/bi'
 import { RiStockFill } from 'react-icons/ri'
@@ -19,7 +20,16 @@ function loadScript(src) {
 }
 
 function Pricing() {
+	const [orderId, setOrderId] = useState('');
 	const router = useRouter();
+
+	useEffect(() => {
+		if(orderId){
+			router.replace('/dashboard');
+		}
+	}, [orderId])
+
+	console.log(orderId);
 
     async function displayRazorpay() {
 		const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
@@ -50,7 +60,8 @@ function Pricing() {
 				// alert(response.razorpay_signature)
 				//console.log('---success capture---')
 				//console.log(response)
-				router.replace('/dashboard')
+				setOrderId(response.razorpay_order_id);
+				//router.replace('/dashboard')
 				//router.push('/dashboard')
 			}
             //,
